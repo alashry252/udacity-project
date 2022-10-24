@@ -80,6 +80,7 @@ window.onscroll=function (){
 
 // Set sections as active
 navList.addEventListener("click",(toSec) =>{
+    toSec.preventDefault();
     if (toSec.target.dataset.nav) {
         document.getElementById(`${toSec.target.dataset.nav}`)
         .scrollIntoView({behavior:"smooth"});
