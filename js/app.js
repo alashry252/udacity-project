@@ -89,3 +89,4 @@ navList.addEventListener("click",(toSec) =>{
         },200);
     }
 });
+//Updating files and I had some help because I was late. I promise in the next project to do my best
