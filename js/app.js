@@ -30,14 +30,14 @@ const section=Array.from(document.querySelectorAll("section"));
  * Start Helper Functions
  * 
 */
-function createListItem(){
+function createList(){
     for(sec of section){
-        listItem=document.createElement("li");
-        listItem.innerHTML =`<li><a href="#${sec.id}" data-nav="${sec.id}" class="menu__link">${sec.dataset.nav}</a></li>`
-        navList.appendChild(listItem);
+        liItem=document.createElement("li");
+        liItem.innerHTML =`<li><a href="#${sec.id}" data-nav="${sec.id}" class="menu__link">${sec.dataset.nav}</a></li>`
+        navList.appendChild(liItem);
     }
 }
-createListItem();
+createList();
 
 /**
  * End Helper Functions
@@ -86,6 +86,6 @@ navList.addEventListener("click",(toSec) =>{
         .scrollIntoView({behavior:"smooth"});
         setTimeout(() =>{
             location.hash=`${toSec.target.dataset.nav}`;
-        },170);
+        },200);
     }
 });
